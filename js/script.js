@@ -22,4 +22,23 @@ const listaEmail = [
     'franco@gmail.com',
     'mario@gmail.com',
     'giancarlo@gmail.com',
-    'gianni@gmail.com' ];    
+    'gianni@gmail.com' ];   
+    
+// chiedo all'utente di inserire la sua email e salvo il valore in una variabile    
+    const userEmail = prompt('inserisci la tua email');
+
+// creo una variabile booleana che mi servirà per capire se l'email è presente nella lista ( inizialmente è false)
+    let emailFound = false;
+
+// ciclo che scorre tutte le email dell'array
+    for (let i = 0; i < listaEmail.length; i++){
+        if (userEmail === listaEmail[i]) { // controllo se l'email dell'utente è uguale a una delle email presenti nell'array
+            emailFound = true; // se è uguale imposto la variabile a true
+        }
+    }
+    // verifico se l'email è stata trovata nella lista degli invitati
+    if (emailFound === true){
+        console.log('Accesso consentito');// se trovata permetto l'accesso
+    } else {
+        console.log('Accesso negato');// se non trovata nego l'accesso
+    }
