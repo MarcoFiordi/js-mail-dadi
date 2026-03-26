@@ -42,3 +42,31 @@ const listaEmail = [
     } else {
         console.log('Accesso negato');// se non trovata nego l'accesso
     }
+
+
+// =======================================================================================================================     
+// GIOCO DEI DADI
+// =======================================================================================================================
+
+// genero un numero casuale da i a 6 per il giocatore
+const playerNumber = Math.floor(Math.random() * 6) + 1;
+// genero un numero casuale da 1 a 6 per il computer
+const computerNumber = Math.floor(Math.random() * 6) +1;
+
+// stampo i numeri
+console.log('Giocatore:', playerNumber);
+console.log('Giocatore:', computerNumber);
+
+// confronto i numeri generati per determinare il vincitore
+if (playerNumber > computerNumber){
+    console.log('Ha vinto il giocatore');// se il numero del giocatore è maggiore, vince il giocatore  
+}
+else if (playerNumber < computerNumber){
+    // se il numero del computer è maggiore, vince il computer
+    console.log('Ha vinto il computer');
+}
+else  {
+    // se i numeri sono uguali, pareggio
+    console.log('Pareggio');
+    
+}
